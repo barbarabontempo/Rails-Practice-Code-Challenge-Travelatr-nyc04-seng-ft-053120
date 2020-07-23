@@ -1,18 +1,19 @@
-<% if @errors %>
-    <% @errors.each do |err|%>
-        <%= err %>
-    <%end%>
-<%end%>
+<% if @errors%>
+    <% @errors.each do |err| %>
+        <p style="color:red"><%= err %></p>
+    <% end%>
+<% end%>
 
-<%= form_with model: @blogger do |f| %>
+<font size="+1" face="Comic Sans MS"><%= form_with model: @blogger do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
-
+    
     <%= f.label :bio %>
     <%= f.text_field :bio %>
-
+    
     <%= f.label :age %>
     <%= f.number_field :age %>
-
+    
     <%= f.submit %>
 <% end %>
+</font>ß
