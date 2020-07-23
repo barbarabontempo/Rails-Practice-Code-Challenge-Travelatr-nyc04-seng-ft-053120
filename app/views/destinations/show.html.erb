@@ -1,0 +1,24 @@
+
+<p> Destination:
+  <%= @destination.name %>
+</p>
+
+<p> Featured post:
+  <%= link_to @destination.most_liked_post.title, post_path(@destination.most_liked_post) %>
+</p>
+
+<p> Most recent posts:
+  <ul>
+    <% @destination.most_recent_posts.each do |post| %>
+      <li>
+        <%= link_to post.title, post_path(post) %>
+      </li>
+    <% end %>
+  </ul>
+</p>
+
+<p> Average age of vistors:
+
+  <%= @destination.average_blogger_age %>
+
+</p>
